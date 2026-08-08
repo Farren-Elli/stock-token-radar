@@ -8,6 +8,8 @@
 - Installed 10 curated Matt Pocock engineering skills locally under `.agents/skills/` for Codex-compatible agents.
 - Established project rules, domain vocabulary, product spec, research record, decision log, and local issue-tracker convention.
 - Preserved the initial Robinscan stock-registry snapshot in `data/source-snapshots/`.
+- Built the first local Next.js dashboard: searchable 203-contract directory, token profile routes, source/evidence language, and no wallet/trading functionality.
+- Verified `npm test` (6 tests) and `npm run build`; also fetched the local home and Tesla profile routes successfully from the development server.
 
 ## Verified facts
 
@@ -17,10 +19,7 @@
 
 ## Next exact task
 
-Create a small research/prototype ticket that answers two questions before choosing the app stack:
-
-1. Is there a first-party machine-readable Robinhood Chain contract registry?
-2. Which minimal web stack best supports a searchable static directory and later evidence/source pages?
+Review the first-party contract-registry research note, then decide whether a source-backed `officially-listed` status can be implemented. If it cannot, retain the current conservative third-party evidence labels and prepare the local app for deployment.
 
 ## Do not do yet
 
