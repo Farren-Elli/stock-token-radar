@@ -1,0 +1,2 @@
+# Preserve source snapshots byte-for-byte; their collection hashes are recorded in docs.
+data/source-snapshots/*.csv -text
