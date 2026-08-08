@@ -19,6 +19,11 @@ A public web application where a visitor can search a locally sourced token dire
 - Token profile pages for directory entries.
 - Source and verification-status display.
 - Plain-language instrument/risk explainer and methodology page.
+- Source-backed verification ledger with retrieval method, timestamp, and snapshot hash.
+- Snapshot comparison baseline and future change summaries.
+- Searchable research-source library and visual verification guide.
+- Side-by-side identity-evidence comparison.
+- Browser-local watchlist without accounts or server storage.
 - Automated tests for parsing, search, status display, and core navigation.
 
 ## Out of scope
@@ -36,9 +41,12 @@ A public web application where a visitor can search a locally sourced token dire
 3. The product never describes a contract as official without a stored evidence record.
 4. The explainer states that the instrument is not equivalent to directly owning the underlying share.
 5. The app builds, tests, and runs locally from documented commands.
+6. Every complete contract address can be copied, and first-party evidence labels link to Robinhood documentation.
+7. Watchlist state remains local to the browser and creates no account or wallet relationship.
+8. Snapshot changes are not claimed until two comparable first-party snapshots exist.
 
-## Open decisions
+## Post-MVP decisions
 
-- Choose the smallest reliable web stack after a short prototype comparison.
-- Identify a first-party machine-readable contract registry, if one exists.
-- Define the evidence schema and status-transition rules before any live-data refresh.
+- Select and document the public Next.js deployment target.
+- Define the evidence schema and status-transition rules before automating any live-data refresh.
+- Preserve each new raw source response immutably and review mapping changes before publication.

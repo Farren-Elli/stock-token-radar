@@ -1,5 +1,10 @@
+import { InstrumentCompare } from "./instrument-compare";
+import { ResearchLibrary } from "./research-library";
 import { SignalCanvas } from "./signal-canvas";
+import { SectionLink } from "./section-link";
+import { SnapshotTracker } from "./snapshot-tracker";
 import { TokenDirectory } from "./token-directory";
+import { VerificationGuide } from "./verification-guide";
 import { getSnapshotTokens } from "../src/lib/snapshot";
 
 export default async function Home() {
@@ -10,7 +15,7 @@ export default async function Home() {
     <main>
       <nav className="nav" aria-label="Primary navigation">
         <a className="brand" href="/">Stock Token Radar<span> / research terminal</span></a>
-        <div className="nav-links"><a href="#directory">Directory</a><a href="#methodology">Method</a></div>
+        <div className="nav-links"><SectionLink sectionId="directory">Directory</SectionLink><SectionLink sectionId="compare">Compare</SectionLink><SectionLink sectionId="guide">Verify</SectionLink><SectionLink sectionId="research">Sources</SectionLink></div>
       </nav>
 
       <section className="hero" aria-labelledby="page-title">
@@ -22,7 +27,7 @@ export default async function Home() {
           <p className="hero-copy">
             Inspect Robinhood Chain tokenized-stock mappings against a dated, reproducible first-party source. No wallet connection. No trading surface. No implied investment advice.
           </p>
-          <a className="primary-action" href="#directory">Browse the registry <span aria-hidden="true">↓</span></a>
+          <SectionLink className="primary-action" sectionId="directory">Browse the registry <span aria-hidden="true">↓</span></SectionLink>
         </div>
         <div className="stats" aria-label="Snapshot statistics">
           <div><strong>{tokens.length}</strong><span>instruments mapped</span></div>
@@ -38,6 +43,14 @@ export default async function Home() {
       </section>
 
       <TokenDirectory tokens={tokens} />
+
+      <InstrumentCompare tokens={tokens} />
+
+      <VerificationGuide />
+
+      <SnapshotTracker tokens={tokens} />
+
+      <ResearchLibrary />
 
       <section id="methodology" className="methodology">
         <div className="method-intro"><p className="eyebrow">Methodology</p><h2>Evidence, not a trading interface.</h2></div>

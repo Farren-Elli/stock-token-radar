@@ -2,7 +2,7 @@
 
 Issues and specifications for this project are tracked in the repository’s GitHub Issues:
 
-<https://github.com/Farren-Elli/stock-token-radar/issues>
+<https://github.com/farren-labs/stock-token-radar/issues>
 
 ## Conventions
 

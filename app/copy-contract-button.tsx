@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export function CopyContractButton({ address }: { address: string }) {
+export function CopyContractButton({ address, label = "contract address" }: { address: string; label?: string }) {
   const [copied, setCopied] = useState(false);
 
   async function copyAddress() {
@@ -16,7 +16,7 @@ export function CopyContractButton({ address }: { address: string }) {
   }
 
   return (
-    <button className="copy-button" type="button" onClick={copyAddress} aria-label={`Copy contract address ${address}`}>
+    <button className="copy-button" type="button" onClick={copyAddress} aria-label={`Copy complete ${label} ${address}`}>
       {copied ? "Copied" : "Copy"}
     </button>
   );

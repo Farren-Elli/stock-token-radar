@@ -5,7 +5,7 @@
 ## Completed
 
 - Created local Git workspace, then migrated it to `/Volumes/Farren/Projects/stock-token-radar`.
-- Published the public GitHub repository: `https://github.com/Farren-Elli/stock-token-radar`.
+- Published the public GitHub repository: `https://github.com/farren-labs/stock-token-radar`.
 - Installed 10 curated Matt Pocock engineering skills locally under `.agents/skills/` for Codex-compatible agents.
 - Established project rules, domain vocabulary, product spec, research record, decision log, and GitHub Issue workflow.
 - Preserved the initial Robinscan stock-registry snapshot in `data/source-snapshots/` for comparison only.
@@ -13,7 +13,9 @@
 - Redesigned the research UI with an original canvas-based signal field, compact verification-terminal visual system, responsive evidence index, and methodology section.
 - Added copy controls for every contract address in the directory and token profiles.
 - Linked every first-party canonical-mapping status to Robinhood’s token-contract documentation.
-- Verified `npm test` (10 tests) and `npm run build`; fetched the local home and Apple profile routes successfully from the development server.
+- Added source-backed verification ledgers, side-by-side instrument comparison, a five-step verification guide, searchable research sources, a truthful baseline snapshot tracker, and a browser-local watchlist.
+- Replaced persistent hash navigation and long smooth scrolling with stable, instant section navigation; stale section hashes reset to the top instead of repeatedly scrolling after reloads.
+- Verified `npm test` (16 tests), `npm run build`, desktop/mobile responsive rendering, full-address clipboard behavior, localStorage watchlist behavior, keyboard search focus, stable section navigation, and the Apple verification-ledger route.
 
 ## Verified facts
 

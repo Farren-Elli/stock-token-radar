@@ -1,6 +1,14 @@
 # Decision Log
 
-## 2026-08-08 — Start as a non-custodial research product
+## 2026-08-08 — Use Canvas UI as visual inspiration without its experimental runtime
+
+**Decision:** Keep the original lightweight, reduced-motion-aware signal canvas rather than copying a Canvas UI Grid or Glass component into the production dashboard.
+
+**Why:** Canvas UI's source-registry components are strong design references, but their primary effects use WebGL and an experimental HTML-in-canvas API that currently requires a browser flag during development or a domain-bound origin-trial token in production. The local signal field delivers the intended visual character with less client code, broader browser support, and no distortion of evidence content.
+
+**Reference:** <https://canvasui.dev/docs/installation> and <https://canvasui.dev/docs/components/grid>
+
+## 2026-08-08 — Build a transparency product, not a tradable asset
 
 **Decision:** Version 1 will be an informational directory and verification dashboard. It will not connect wallets, move money, execute trades, issue a token, or provide investment advice.
 
@@ -14,7 +22,7 @@
 
 ## 2026-08-08 — Move implementation tracking to GitHub Issues
 
-**Decision:** After publishing `Farren-Elli/stock-token-radar`, track substantial implementation work in GitHub Issues rather than local Markdown tickets.
+**Decision:** After publishing `farren-labs/stock-token-radar`, track substantial implementation work in GitHub Issues rather than local Markdown tickets.
 
 **Why:** GitHub Issues provide a public, durable work queue that can be linked to commits and future pull requests.
 
