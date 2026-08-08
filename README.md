@@ -2,7 +2,7 @@
 
 A public, source-backed dashboard for researching tokenized stock instruments on Robinhood Chain.
 
-> **Status:** Foundation established; application implementation has not started.
+> **Status:** Public GitHub repository and tested local MVP are available. Phase 2 is focused on deployment, data freshness, and product depth.
 
 ## Product promise
 
@@ -28,7 +28,7 @@ Stock Token Radar helps users discover token contracts, understand verification 
 - `docs/decisions.md` — decision log.
 - `docs/research/` — dated research findings and source links.
 - `data/source-snapshots/` — immutable raw registry snapshots.
-- `.scratch/` — local Markdown issue tracker (created when work tickets are needed).
+- `docs/agents/issue-tracker.md` — GitHub Issue workflow.
 - `.agents/skills/` — project-local Matt Pocock engineering skills installed for Codex-compatible agents.
 
 ## Source snapshot

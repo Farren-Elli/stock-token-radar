@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   evidenceLabel,
+  evidenceSourceUrl,
   normalizeSearchQuery,
   parseTokenCsv,
   searchTokens,
@@ -48,6 +49,16 @@ describe("evidenceLabel", () => {
   it("keeps third-party records explicitly unverified", () => {
     expect(evidenceLabel("Official")).toBe("Third-party explorer label; unverified");
     expect(evidenceLabel("")).toBe("Third-party registry; unverified");
+  });
+});
+
+describe("evidenceSourceUrl", () => {
+  it("links first-party mapping evidence to Robinhood's canonical contract documentation", () => {
+    expect(evidenceSourceUrl("First-party registry")).toBe("https://docs.robinhood.com/chain/contracts/");
+  });
+
+  it("does not invent a canonical link for third-party statuses", () => {
+    expect(evidenceSourceUrl("Official")).toBeUndefined();
   });
 });
 

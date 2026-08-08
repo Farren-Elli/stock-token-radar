@@ -12,6 +12,12 @@
 
 **Why:** The initial snapshot has 203 records while Robinhood's own page advertised 90+ Stock Tokens. The discrepancy needs investigation.
 
+## 2026-08-08 — Move implementation tracking to GitHub Issues
+
+**Decision:** After publishing `Farren-Elli/stock-token-radar`, track substantial implementation work in GitHub Issues rather than local Markdown tickets.
+
+**Why:** GitHub Issues provide a public, durable work queue that can be linked to commits and future pull requests.
+
 ## 2026-08-08 — Use a local Markdown issue tracker initially
 
 **Decision:** Keep specs and tickets in `.scratch/` until the GitHub repository is created and connected.

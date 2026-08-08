@@ -21,6 +21,14 @@ export function evidenceLabel(registryStatus: string): string {
   return "Third-party registry; unverified";
 }
 
+export function evidenceSourceUrl(registryStatus: string): string | undefined {
+  if (registryStatus === "First-party registry") {
+    return "https://docs.robinhood.com/chain/contracts/";
+  }
+
+  return undefined;
+}
+
 export function parseTokenCsv(csv: string): StockToken[] {
   const lines = csv.trim().split(/\r?\n/);
   const rows = lines.slice(1).filter(Boolean);
