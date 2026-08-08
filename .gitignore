@@ -1,0 +1,15 @@
+# Local configuration and secrets
+.env
+.env.local
+.env.*.local
+
+# Dependencies and build output
+node_modules/
+.next/
+dist/
+coverage/
+
+# Local editor/system files
+.DS_Store
+
+# Scratch issue-work may be committed deliberately; do not blanket-ignore .scratch/
