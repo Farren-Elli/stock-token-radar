@@ -4,7 +4,7 @@ import { parseTokenCsv, type StockToken } from "./token-registry";
 
 const snapshotPath = path.join(
   process.cwd(),
-  "data/source-snapshots/2026-08-08-robinscan-stock-registry.csv",
+  "data/derived/2026-08-08-robinhood-chain-first-party-token-registry.csv",
 );
 
 export async function getSnapshotTokens(): Promise<StockToken[]> {

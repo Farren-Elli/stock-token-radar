@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  evidenceLabel,
   normalizeSearchQuery,
   parseTokenCsv,
   searchTokens,
@@ -36,6 +37,17 @@ describe("searchTokens", () => {
 
   it("returns every token for a blank query", () => {
     expect(searchTokens(tokens, "   ")).toEqual(tokens);
+  });
+});
+
+describe("evidenceLabel", () => {
+  it("marks a first-party registry record as canonical mapping evidence", () => {
+    expect(evidenceLabel("First-party registry")).toBe("First-party canonical mapping");
+  });
+
+  it("keeps third-party records explicitly unverified", () => {
+    expect(evidenceLabel("Official")).toBe("Third-party explorer label; unverified");
+    expect(evidenceLabel("")).toBe("Third-party registry; unverified");
   });
 });
 

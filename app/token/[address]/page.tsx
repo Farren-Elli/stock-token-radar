@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { evidenceLabel } from "../../../src/lib/token-registry";
 import { getSnapshotTokens } from "../../../src/lib/snapshot";
 
 export default async function TokenPage({ params }: { params: Promise<{ address: string }> }) {
@@ -19,8 +20,8 @@ export default async function TokenPage({ params }: { params: Promise<{ address:
         <dl>
           <div><dt>Robinhood Chain</dt><dd>Chain ID 4663</dd></div>
           <div><dt>Contract address</dt><dd><code>{token.contractAddress}</code></dd></div>
-          <div><dt>Snapshot status</dt><dd>{token.registryStatus ? "Explorer-labelled official" : "Registry-listed; unverified"}</dd></div>
-          <div><dt>Evidence limit</dt><dd>This snapshot is third-party evidence, not a first-party attestation.</dd></div>
+          <div><dt>Evidence status</dt><dd>{evidenceLabel(token.registryStatus)}</dd></div>
+          <div><dt>Evidence source</dt><dd>Robinhood first-party asset registry snapshot, 08 Aug 2026.</dd></div>
         </dl>
         <div className="detail-actions">
           <a href={`https://robinscan.io/token/${token.contractAddress}`} target="_blank" rel="noreferrer">Inspect on Robinscan ↗</a>

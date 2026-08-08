@@ -26,7 +26,7 @@ The endpoint is live and documented as cached; the count, status, and rows are o
 
 ### 1. First-party documentation specifies the JSON mapping schema
 
-**Source:** [Robinhood Chain documentation — Stock Token APIs](https://docs.robinhood.com/chain/stock-token-apis/)  
+**Source:** [Robinhood Chain documentation — Stock Token APIs](https://docs.robinhood.com/chain/stock-token-apis/)
 **Retrieved:** 2026-08-08
 
 The Robinhood-controlled documentation states that Robinhood provides read-only REST endpoints under `https://api.robinhood.com/rhj/` for Stock Token data. For `GET https://api.robinhood.com/rhj/assets`, it documents:
@@ -42,7 +42,7 @@ The documentation's example itself links a symbol to a deployment address. It al
 
 ### 2. The live first-party API returned the mapping in the documented shape
 
-**Source:** <https://api.robinhood.com/rhj/assets>  
+**Source:** <https://api.robinhood.com/rhj/assets>
 **Retrieved:** 2026-08-08 20:12:58 BST
 
 The live response contained 96 `assets` records and 96 deployments. A JSON validation of the retrieved response found no missing `id`, `tokenSymbol`, `tokenName`, `deployments`, `status`, `deployments[].chainId`, or `deployments[].contractAddress` fields; all deployments used chain ID `4663`; all 96 contract values had `0x` + 40-hex-character form; and no `tokenSymbol` was duplicated. For example, the record selected by `tokenSymbol == "AAPL"` was unique in the response and contained:
@@ -71,15 +71,15 @@ This verifies a machine-readable first-party mapping for the AAPL Stock Token at
 
 A second direct API check corroborated the same mapping for AAPL:
 
-**Source:** <https://api.robinhood.com/rhj/prices/AAPL>  
-**Retrieved:** 2026-08-08 20:12:58 BST  
+**Source:** <https://api.robinhood.com/rhj/prices/AAPL>
+**Retrieved:** 2026-08-08 20:12:58 BST
 **HTTP result:** `200 OK`; response SHA-256 `9360b57f04937b476acd0f437fbe9db22b8707d90258d20c4dd1a276037a6da3`
 
 Its `quotes[0]` record had `tokenSymbol: "AAPL"` and deployment `{ "chainId": 4663, "contractAddress": "0xaF3D76f1834A1d425780943C99Ea8A608f8a93f9" }`.
 
 ### 3. Robinhood labels its contract registry canonical
 
-**Source:** [Robinhood Chain documentation — Token Contracts](https://docs.robinhood.com/chain/contracts/)  
+**Source:** [Robinhood Chain documentation — Token Contracts](https://docs.robinhood.com/chain/contracts/)
 **Retrieved:** 2026-08-08
 
 The page says:
@@ -90,7 +90,7 @@ It further says the Stock Tokens & Tokenized ETFs table is “generated live fro
 
 ### 4. Product scope and issuer identity are separately stated by Robinhood
 
-**Source:** [Robinhood Stock Tokens product page](https://robinhood.com/rhj/stocktokens/?lang=en)  
+**Source:** [Robinhood Stock Tokens product page](https://robinhood.com/rhj/stocktokens/?lang=en)
 **Retrieved:** 2026-08-08
 
 The product page identifies the product as Robinhood Stock Tokens and describes them as tokenized debt securities issued by Robinhood Assets (Jersey) Limited. This supports that the API/docs concern the intended Robinhood Stock Token product; it is not the evidence for an individual address mapping.

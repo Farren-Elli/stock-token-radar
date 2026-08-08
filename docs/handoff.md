@@ -14,12 +14,12 @@
 ## Verified facts
 
 - Robinhood Chain ID: `4663`.
-- Initial third-party registry snapshot: 203 contracts and 25 explorer-labelled `Official` entries.
-- Robinhood's public product page advertised 90+ Stock Tokens at collection time.
+- The app uses a 96-contract first-party asset-registry snapshot captured at 2026-08-08 20:12:58 BST; raw JSON SHA-256: `c5a34065a65f3c596f963ffb3ed8b777b8964567a88e451cd78cc51fcf6b7589`.
+- The earlier 203-record Robinscan explorer snapshot is retained only for comparison.
 
 ## Next exact task
 
-Review the first-party contract-registry research note, then decide whether a source-backed `officially-listed` status can be implemented. If it cannot, retain the current conservative third-party evidence labels and prepare the local app for deployment.
+Create a GitHub repository and deploy this tested MVP. Before publishing, read the product/spec and research note; do not add financial features or live data without a separate decision and security review.
 
 ## Do not do yet
 

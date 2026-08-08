@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { searchTokens, type StockToken } from "../src/lib/token-registry";
+import { evidenceLabel, searchTokens, type StockToken } from "../src/lib/token-registry";
 
 export function TokenDirectory({ tokens }: { tokens: StockToken[] }) {
   const [query, setQuery] = useState("");
@@ -50,8 +50,8 @@ export function TokenDirectory({ tokens }: { tokens: StockToken[] }) {
                   <code>{token.contractAddress.slice(0, 10)}…{token.contractAddress.slice(-6)}</code>
                 </td>
                 <td>
-                  <span className={token.registryStatus ? "status status-evidence" : "status"}>
-                    {token.registryStatus ? "Explorer-labelled official" : "Registry-listed; unverified"}
+                  <span className={token.registryStatus === "First-party registry" ? "status status-evidence" : "status"}>
+                    {evidenceLabel(token.registryStatus)}
                   </span>
                 </td>
               </tr>
@@ -60,7 +60,7 @@ export function TokenDirectory({ tokens }: { tokens: StockToken[] }) {
         </table>
       </div>
       <p className="table-note">
-        “Explorer-labelled official” reflects the third-party snapshot’s label only. It is not a first-party verification claim.
+        Records are derived from Robinhood’s first-party asset registry snapshot. The raw JSON, retrieval timestamp, and SHA-256 are committed under <code>data/source-snapshots/</code>.
       </p>
     </section>
   );

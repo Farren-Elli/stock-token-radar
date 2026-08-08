@@ -20,7 +20,7 @@ Stock Token Radar is an educational, source-backed directory and monitoring inte
 
 - Robinhood's public Stock Tokens page describes Stock Tokens as tokenized debt securities issued by Robinhood Assets (Jersey) Limited.
 - The page says holders receive economic exposure; it says holders do not receive legal or beneficial rights in or against the issuer of the underlying security.
-- The first explorer-derived snapshot is third-party data. Its labels require separate validation.
+- The first explorer-derived snapshot is retained for comparison only. The application directory uses the dated first-party Robinhood asset-registry snapshot.
 - Availability and transferability can depend on jurisdiction and product terms. Never make a global availability claim.
 
 ## Trust hierarchy

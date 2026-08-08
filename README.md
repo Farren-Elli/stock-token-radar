@@ -33,7 +33,7 @@ Stock Token Radar helps users discover token contracts, understand verification 
 
 ## Source snapshot
 
-The first snapshot was collected on 2026-08-08 from the public Robinscan stock registry. It has 203 records, of which 25 were labelled `Official` by the explorer UI. Robinhood's own public Stock Tokens page advertised `90+` tokens at collection time. These counts differ, so the explorer label is **not sufficient on its own** to make an official-status claim.
+The first snapshot was collected on 2026-08-08 from a public Robinscan stock registry and is retained for comparison. The application directory uses Robinhood’s first-party asset registry snapshot captured on 2026-08-08: 96 Chain ID 4663 contract mappings. The raw JSON hash is `c5a34065a65f3c596f963ffb3ed8b777b8964567a88e451cd78cc51fcf6b7589`.
 
 ## Current setup
 

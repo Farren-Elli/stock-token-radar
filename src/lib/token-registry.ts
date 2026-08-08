@@ -9,6 +9,18 @@ export function normalizeSearchQuery(query: string): string {
   return query.trim().toLowerCase();
 }
 
+export function evidenceLabel(registryStatus: string): string {
+  if (registryStatus === "First-party registry") {
+    return "First-party canonical mapping";
+  }
+
+  if (registryStatus === "Official") {
+    return "Third-party explorer label; unverified";
+  }
+
+  return "Third-party registry; unverified";
+}
+
 export function parseTokenCsv(csv: string): StockToken[] {
   const lines = csv.trim().split(/\r?\n/);
   const rows = lines.slice(1).filter(Boolean);
