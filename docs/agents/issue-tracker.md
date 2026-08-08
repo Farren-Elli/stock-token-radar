@@ -1,13 +1,17 @@
-# Issue tracker: Local Markdown
+# Issue tracker: GitHub Issues
 
-Issues and specifications live in `.scratch/` until this repository has a GitHub remote and the owner explicitly migrates to GitHub Issues.
+Issues and specifications for this project are tracked in the repository’s GitHub Issues:
+
+<https://github.com/Farren-Elli/stock-token-radar/issues>
 
 ## Conventions
 
-- One feature per directory: `.scratch/<feature-slug>/`.
-- Feature spec: `.scratch/<feature-slug>/spec.md`.
-- Implementation tickets: `.scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01`.
-- Each ticket states `Status:`, `Blocked by:`, acceptance criteria, and verification commands.
-- Append decisions or review notes under `## Comments` rather than losing prior reasoning.
+- Create a GitHub Issue before a substantial feature or architectural change.
+- Issue titles should state the outcome, not the implementation mechanism.
+- Include acceptance criteria, data/source requirements, and verification commands.
+- Use `Closes #<number>` in a pull request or commit message when implementation completes an issue.
+- Keep product decisions in `docs/decisions.md` and durable architecture choices in `docs/adr/`; an issue is not a substitute for either.
 
-When a workflow says to publish to the issue tracker, create the appropriate Markdown file. When it says to fetch a ticket, read the referenced file.
+## Project guardrails
+
+Issues must preserve the v1 product boundary: no custody, wallet connection, trade execution, token issuance, or investment advice unless the product specification and a new ADR explicitly approve it.

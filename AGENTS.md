@@ -22,7 +22,7 @@ Build a public, educational, non-custodial dashboard for discovering and verifyi
 ## Agent skills
 
 ### Issue tracker
-Issues and implementation briefs are tracked as local Markdown files under `.scratch/`. See `docs/agents/issue-tracker.md`.
+Issues and implementation briefs are tracked on GitHub Issues for `Farren-Elli/stock-token-radar`. Use `gh issue` commands and link implementation commits/PRs to their issue.
 
 ### Domain docs
 This is a single-context repository. See `docs/agents/domain.md`.
