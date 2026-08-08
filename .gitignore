@@ -3,9 +3,10 @@
 .env.local
 .env.*.local
 
-# Dependencies and build output
+# Dependencies and generated build output
 node_modules/
 .next/
+next-env.d.ts
 dist/
 coverage/
 
